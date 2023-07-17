@@ -40,6 +40,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home.jsx";
 import ContentLayout from "./pages/layout/ContentLayout.jsx";
 import Login from "./pages/Login.jsx";
+import Dashboard from "./pages/protected-pages/Dashboard.jsx";
 
 
 const App = () => {
@@ -48,7 +49,7 @@ const App = () => {
                 <Route path="/login" element={<Login />} />
                 <Route index element={<Home />} />
                 <Route element={<ContentLayout />}>
-
+                    <Route path="/dashboard" element={<Dashboard />} />
                 </Route>
             </Routes>
     ); }; export default App;
